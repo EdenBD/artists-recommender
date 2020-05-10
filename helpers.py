@@ -63,3 +63,18 @@ def plot_training(loss, accuracy, num_epochs):
 
   plt.legend(['val_loss', 'val_accuracy'], loc='lower left')
   plt.show()
+
+def plot_results(content, content_embed, collaborative, user, top):
+  plt.title("Top 5 recommendation for user {}".format(user))
+  plt.xlabel("Rank")
+  plt.ylabel("model")
+
+  plt.gca().set_prop_cycle(color=['blue', 'green','orange'])
+  # Set x axis
+  plt.xticks(range(top), range(1,top+1))
+  plt.plot(content)
+  plt.plot(content_embed)
+  plt.plot(collaborative)
+
+  plt.legend(['features content', 'embedding content', 'collaborative'], loc='lower left')
+  plt.show()
