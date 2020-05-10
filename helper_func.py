@@ -65,16 +65,18 @@ def plot_training(loss, accuracy, num_epochs):
   plt.show()
 
 def plot_results(content, content_embed, collaborative, user, top):
-  plt.title("Top 5 recommendation for user {}".format(user))
-  plt.xlabel("Rank")
+  plt.title("Top 5 Recommendation for user {}".format(user))
+  plt.xlabel("Unordered Rank")
   plt.ylabel("model")
 
-  plt.gca().set_prop_cycle(color=['blue', 'green','orange'])
+  plt.gca().set_prop_cycle(color=['blue', 'yellow','red'])
   # Set x axis
-  plt.xticks(range(top), range(1,top+1))
-  plt.plot(content)
-  plt.plot(content_embed)
-  plt.plot(collaborative)
+  x = range(1,top+1)
+  size = 70
+  tranperancy = 0.7
+  plt.scatter(x, sorted(content), s=size, alpha=tranperancy)
+  plt.scatter(x, sorted(content_embed), s=size, alpha=tranperancy)
+  plt.scatter(x, sorted(collaborative), s=size, alpha=tranperancy)
 
-  plt.legend(['features content', 'embedding content', 'collaborative'], loc='upper left')
+  plt.legend(['features content', 'embedding content', 'collaborative'])
   plt.show()
