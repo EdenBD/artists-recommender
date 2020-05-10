@@ -76,5 +76,5 @@ def plot_results(content, content_embed, collaborative, user, top):
   plt.plot(content_embed)
   plt.plot(collaborative)
 
-  plt.legend(['features content', 'embedding content', 'collaborative'], loc='lower left')
+  plt.legend(['features content', 'embedding content', 'collaborative'], loc='upper left')
   plt.show()
