@@ -1,7 +1,7 @@
 # Artists Recommendation System 
 ## Combining Neural Collaborative Recommendations and Content Based Recommendations
 
-I introduce a Recommendation system that combines:
+An artists recommendation system that combines:
   1. [Neural Collaborative filtering](https://arxiv.org/abs/1708.05031) that extends the collaborative filtering matrix factorization       technique to a deep Neural Net. 
   2. Content Based recommendations that help understand how users are making decisions.
   
